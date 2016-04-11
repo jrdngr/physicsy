@@ -20,7 +20,7 @@ public class Physics : MonoBehaviour {
 
         Vector3 newPosition = new Vector3(transform.position.x, transform.position.y, 0);
         velocity += totalForce * Time.deltaTime;
-        velocity -= velocity * drag * drag * Time.deltaTime;
+        velocity -= velocity * drag * Time.deltaTime;
         if (velocity.magnitude > maxSpeed) {
             velocity = velocity.normalized * maxSpeed;
         }
